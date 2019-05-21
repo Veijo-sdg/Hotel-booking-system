@@ -16,17 +16,18 @@ class admin extends Seeder
         Role::create(['name'=> "admin"]);
 
         DB::table('employees')->insert([
-            'name' => 'admin',
-            'email' => 'admin@admin.com',
+            'name' => 'admin1',
+            'email' => 'admin1@admin.com',
             'image' => 'image',
             'employee_id' => '0',
-            'password' => bcrypt('123456'),
+            //'password' => bcrypt('123456'),
+            'password' => ('123456'),
             'National_ID' => mt_rand(10000000000 , 99999999999),
             'image' => '3.jpg',
             'employee_id' => 1
         ]);
 
-        $emp =  Employee::first()->assignRole('admin');
+        $emp =  Employee::first()->assignRole('admin1');
 
     }
 
